@@ -9,6 +9,8 @@ exe = ELF("./file_name")
 
 libc = ELF("/usr/lib/libc.so.6")
 
+context.log_level = 'info'
+context.arch = 'amd64'
 context.binary = exe.path
 context.terminal = ["tmux", "new-window"]
 
