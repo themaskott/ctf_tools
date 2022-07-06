@@ -11,7 +11,6 @@ BIN="$1"
 
 echo "[+] Analysing : $BIN"
 echo
-echo
 
 echo "[>] file :"
 file "$BIN"
@@ -35,7 +34,6 @@ objdump -S "$BIN" | grep system | grep -A 1 ">:"
 echo
 
 echo "[>] strings :"
-
 strings -t x "$BIN" | grep "/bin/sh"
 echo
 
