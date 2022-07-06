@@ -5,7 +5,7 @@ Just some empty scripts to save time during CTF
 
 ### Quick binary information
 
-```shell-session
+```bash
 $ ./quick_bin_info.sh ../../test/chall                                                                                                                                                                                           ✔  16:01:19 
 [+] Analysing : ../../test/chall
 
@@ -39,7 +39,7 @@ Références de version:
 
 Sections :
 
-0000000000001040 <puts@plt>:
+0000000000001040 <puts@plt>:``
     1040:	ff 25 da 2f 00 00    	jmpq   *0x2fda(%rip)        # 4020 <puts@GLIBC_2.2.5>
 
 0000000000001050 <system@plt>:
