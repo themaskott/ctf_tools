@@ -12,19 +12,16 @@ libc = ELF("/usr/lib/libc.so.6")
 context.log_level = 'info'
 context.arch = 'amd64'
 context.binary = exe.path
-context.terminal = ["tmux", "new-window"]
+context.terminal = ["termintaor", "-e"]
 
-if args.REMOTE:
-    NL = b"\r\n"
-else:
-    NL = b"\n"
 
 def conn():
     if args.REMOTE:
         r = remote(HOST, PORT)
+    elif args.TRACE:
+        r  = process(["strace", "-o","strace.out", exe.path])
     else:
         r = process([exe.path])
-
     return r
 
 def attach_gdb():
