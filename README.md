@@ -1,6 +1,6 @@
-# ctf_tools
+# CTF Tools
 
-Just some empty scripts to save time during CTF
+Just some empty scripts to save time during CTF, tips, tricks and reminders.
 
 
 ### Quick binary information
@@ -62,5 +62,4 @@ Partial RELRO   No canary found   NX enabled    PIE enabled     No RPATH   No RU
 
 [>>> gadgets :]
 0x000000000000122b : pop rdi ; ret
-
 ```
