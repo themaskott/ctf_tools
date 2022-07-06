@@ -5,20 +5,10 @@ from pwn import *
 HOST = "chall.host.com"
 PORT = 1337
 
-def conn():
-    if args.REMOTE:
-        r = remote(HOST, PORT)
-    else:
-        r = process([exe.path])
-
-    return r
-
-
-
 def main():
-    global r
-    r = conn()
+    r = remote(HOST, PORT)
     r.send()
+    r.sendline()
     r.recv()
     r.recvuntil()
 
