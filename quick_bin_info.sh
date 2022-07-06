@@ -9,18 +9,40 @@ fi
 
 BIN="$1"
 
+
+banner(){
+  echo "[>>> $1]"
+}
+
+
+
 echo "[+] Analysing : $BIN"
 echo
 
-echo "[>] file :"
+banner "hashes :"
+echo -n "MD5 : "
+md5sum "$BIN"
+echo -n "SHA1 : "
+sha1sum "$BIN"
+echo -n "SH256 : "
+sha256sum "$BIN"
+echo -n "SHA512 : "
+sha512sum "$BIN"
+echo
+
+banner "ls :"
+ls -la "$BIN"
+echo
+
+banner "file :"
 file "$BIN"
 echo
 
-echo "[>] ldd :"
+banner "ldd :"
 ldd -v "$BIN"
 echo
 
-echo "[>] objdump :"
+benner "objdump :"
 objdump -f "$BIN"
 echo
 
@@ -33,13 +55,13 @@ echo
 objdump -S "$BIN" | grep system | grep -A 1 ">:"
 echo
 
-echo "[>] strings :"
+banner "strings :"
 strings -t x "$BIN" | grep "/bin/sh"
 echo
 
-echo "[>] checksec :"
+banner "checksec :"
 checksec --file="$BIN"
 echo
 
-echo "[>] gadgets :"
+banner "gadgets :"
 ROPgadget --binary "$BIN" | grep ": pop rdi ; ret"
