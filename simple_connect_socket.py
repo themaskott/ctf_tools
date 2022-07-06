@@ -17,6 +17,9 @@ class Connect:
 		rep = self.s.recv(1024)
 		return rep
 
+	def recv(self, size):
+		return self.s.recv(size)
+
 	def recv_until(self, patern):
 		rep = b''
 		while patern not in rep:
