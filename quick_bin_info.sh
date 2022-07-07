@@ -42,7 +42,7 @@ banner "ldd :"
 ldd -v "$BIN"
 echo
 
-benner "objdump :"
+banner "objdump :"
 objdump -f "$BIN"
 echo
 

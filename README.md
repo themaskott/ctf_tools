@@ -6,7 +6,7 @@ Just some empty scripts to save time during CTF, tips, tricks and reminders.
 ### Quick binary information
 
 ```bash
-$ ./quick_bin_info.sh ../../test/chall
+$ ./quick_bin_info.sh ../../test/chall                                                                                                                                                                                           ✔  22:11:21 
 [+] Analysing : ../../test/chall
 
 [>>> hashes :]
@@ -16,15 +16,15 @@ SH256 : 71e797094c8d2780e7c35362c667c1c819fff0d2e579a9dda3a09642043d6e7f  ../../
 SHA512 : 451ab2ed9e050a815e98653278d52003f2257d6d280cc5b9ec1e24fe9dfa6b6da6043b8609d1afc1c76f1dc6a0cc81f59aec9efaa5c0521052161f6232106b02  ../../test/chall
 
 [>>> ls :]
--rwxr-xr-x 1 mk mk 16760  6 juil. 15:10 ../../test/chall
+-rwxr-xr-x 1 mk mk 16760  7 juil. 22:11 ../../test/chall
 
 [>>> file :]
 ../../test/chall: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=62204d730127917f105d41a188515bf554be5bf8, for GNU/Linux 3.2.0, not stripped
 
 [>>> ldd :]
-	linux-vdso.so.1 (0x00007fff14f40000)
-	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f3d5f6de000)
-	/lib64/ld-linux-x86-64.so.2 (0x00007f3d5f8c1000)
+	linux-vdso.so.1 (0x00007ffd69e85000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fd1a7c05000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fd1a7de8000)
 
 	Version information:
 	../../test/chall:
@@ -33,7 +33,7 @@ SHA512 : 451ab2ed9e050a815e98653278d52003f2257d6d280cc5b9ec1e24fe9dfa6b6da6043b8
 		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
 		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
 
-./quick_bin_info.sh: ligne 45: benner : commande introuvable
+[>>> objdump :]
 
 ../../test/chall:     format de fichier elf64-x86-64
 architecture: i386:x86-64, fanions 0x00000150:
